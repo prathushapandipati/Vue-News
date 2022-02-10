@@ -3,9 +3,6 @@
     <b-jumbotron class="text-center pb-2"  bg-variant="dark" header="SwedenNews" text-variant="white">
       
       <br>
-      <!--<b-alert variant="danger" show dismissible fade>
-        Due to changes in the pricing policy of the News API, API calls can only be made locally. Please clone the repository and run it locally.
-      </b-alert>-->
       <b-container>
         <b-form @submit.prevent="fetchData()">
           <b-form-input
