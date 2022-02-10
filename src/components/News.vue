@@ -16,6 +16,23 @@
             v-model="search"
           />
         </b-form>
+        <!-- <b-button-group class="mt-5">
+          <b-button
+            :variant="newsPerPage == 5 ? 'light' : ''"
+            @click="updateNewsPerPage(5)"
+            >5</b-button
+          >
+          <b-button
+            :variant="newsPerPage == 10 ? 'light' : ''"
+            @click="updateNewsPerPage(10)"
+            >10</b-button
+          >
+          <b-button
+            :variant="newsPerPage == 20 ? 'light' : ''"
+            @click="updateNewsPerPage(20)"
+            >20</b-button
+          >
+        </b-button-group>-->
       </b-container>
     </b-jumbotron>
 
