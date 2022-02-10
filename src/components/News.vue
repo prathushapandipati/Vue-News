@@ -1,6 +1,7 @@
 <template>
   <div>
-    <b-jumbotron class="text-center pb-5" header="SwedenNews">
+    <b-jumbotron class="text-center pb-2"  bg-variant="dark" header="SwedenNews" text-variant="white">
+      
       <br>
       <!--<b-alert variant="danger" show dismissible fade>
         Due to changes in the pricing policy of the News API, API calls can only be made locally. Please clone the repository and run it locally.
@@ -8,19 +9,14 @@
       <b-container>
         <b-form @submit.prevent="fetchData()">
           <b-form-input
+            align = "left"
             class="mx-auto mt-5 w-50"
             type="search"
             placeholder="Search"
             v-model="search"
           />
         </b-form>
-        
-      </b-container>
-    </b-jumbotron>
-
-    <b-container>
-
-      <b-button-group class="mt-5">
+         <b-button-group class="mt-5">
           <b-button
             :variant="newsPerPage == 5 ? 'light' : ''"
             @click="updateNewsPerPage(5)"
@@ -37,15 +33,11 @@
             >20</b-button
           >
         </b-button-group>
-      <b-pagination
-        pills
-        align="right"
-        v-model="currentPage"
-        :total-rows="totalResults"
-        :per-page="newsPerPage"
-        class="mt-5 mb-5"
-        @input="updatePage(currentPage)"
-      />
+      </b-container>
+    </b-jumbotron>
+
+    <b-container>
+      
       <b-row>
         <b-col
           cols="6"
@@ -67,6 +59,15 @@
           </b-card>
         </b-col>
       </b-row>
+      <b-pagination
+        pills
+        align="right"
+        v-model="currentPage"
+        :total-rows="totalResults"
+        :per-page="newsPerPage"
+        class="mt-5 mb-5"
+        @input="updatePage(currentPage)"
+      />
     </b-container>
   </div>
 </template>
